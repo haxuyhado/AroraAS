@@ -72,7 +72,7 @@ namespace MedSale_API_Core.Controllers
         }
 
         [HttpDelete("{id}")]
-        private async Task<ActionResult<Product>> DeleteProduct(int id)
+        public async Task<ActionResult<Product>> DeleteProduct(int id)
         {
             var product = await _context.Products.FindAsync(id);
 
